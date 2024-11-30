@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:regular,italic);
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,500,italic,500italic);
+
+body {
+  font-family: var(--primary-fontFamily);
+  color: var(--primary-textColor);
+  font-weight: var(--primary-fontWeight);
+  background-color: var(--primary-bgColor);
+  overflow-x: hidden;
+}
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+$canvasDesktop: 1460;
+$canvasMobile: 800;
+$containerDesktop: 1440;
+$containerMobile: 760;  
+
+.container {
+  max-width: #{$containerDesktop + 40 + px};
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  margin: 0 auto;
+  @media (max-width: #{$canvasMobile + px}) {
+      max-width: #{$containerMobile + 20 + px};
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+  };
+}    

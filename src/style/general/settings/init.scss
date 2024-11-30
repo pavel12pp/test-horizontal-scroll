@@ -1,0 +1,7 @@
+@layer reset {
+  @import './zeroingStyle.scss';
+}
+@layer default {
+  @import './globalVar.scss';
+  @import './basic.scss';
+} 
