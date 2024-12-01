@@ -38,6 +38,10 @@
     "last 5 versions"
   ],
   "dependencies": {
-    "gsap": "^3.12.5"
+    "butter.js": "^0.1.0",
+    "fluidscroll": "^2.0.0",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.17",
+    "locomotive-scroll": "^4.1.4"
   }
 }

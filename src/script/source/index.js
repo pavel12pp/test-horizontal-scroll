@@ -26,7 +26,9 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+
 gsap.registerPlugin(ScrollTrigger);
+let wrapper = document.querySelector('.wrapper');
 
 // gsap.to(".horizont", {
 //   // rotate: 180,
@@ -49,11 +51,27 @@ gsap.to(".horizont", {
   ease: "none", //!!! IMPORTANT СУКА
   scrollTrigger: {
     trigger: '.horizont',
+    // scroller: wrapper,
     // start: "top 0%",
     // end: "bottom 100%",
-    end: "+=4000",
-    markers: true,
+    end: () => {
+      return "+=" + 2 * window.outerWidth;
+    },
+    // markers: true,
     pin: true,
     scrub: 0,
   }
 })
+
+import Lenis from "lenis";
+
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+  duration: 1.2, // Время "transition" для скролла(по умл 1.2) 
+});
+// console.log(lenis)
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});

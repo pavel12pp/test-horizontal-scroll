@@ -15,6 +15,7 @@ html {
   background-color: pink;
   border: 10px solid black;
 }
+
 // .horizont-inner {
 //   height: 300vw;
 // }
@@ -22,6 +23,10 @@ html {
   display: flex;
   width: fit-content;
   height: 100vh;
+}
+.wrapper {
+  // overflow-y: scroll;
+  // overflow-x: clip;
 }
 .panel {
 }

@@ -1,13 +1,11 @@
-gsap.registerPlugin(ScrollTrigger);
+import Lenis from "lenis";
 
-gsap.to('.scroll-wrapper', {
-    xPercent: -200,  // Прокрутка на 200% влево
-    ease: 'none',
-    scrollTrigger: {
-        trigger: '.scroll-container',
-        start: 'top top',
-        end: '+=3000', // Длительность анимации
-        scrub: true, // Зафиксировать прокрутку в момент времени
-        pin: true, // Зафиксировать на экране
-    }
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+console.log(lenis)
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
 });
